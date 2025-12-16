@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dii4jlsb2qbxr"
-path="res://.godot/imported/Speaki-Cry.png-2a4088f1f0fd4a237c10538df521d3d8.ctex"
+uid="uid://qpaxn4q53wlx"
+path="res://.godot/imported/Speaki-Happu.png-677fea9d0d867e5891fc5e8ebc28ce45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Speaki-Cry.png"
-dest_files=["res://.godot/imported/Speaki-Cry.png-2a4088f1f0fd4a237c10538df521d3d8.ctex"]
+source_file="res://assets/speaki/Speaki-Happu.png"
+dest_files=["res://.godot/imported/Speaki-Happu.png-677fea9d0d867e5891fc5e8ebc28ce45.ctex"]
 
 [params]
 

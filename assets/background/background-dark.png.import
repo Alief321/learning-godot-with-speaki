@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8kux80dsnx0"
-path="res://.godot/imported/Speaki-Cherrful.png-340f0e44e91798ec5fae07bf88190473.ctex"
+uid="uid://c08coxfq3gbsa"
+path="res://.godot/imported/background-dark.png-d526bed67566811500b4a24fca5fc5a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Speaki-Cherrful.png"
-dest_files=["res://.godot/imported/Speaki-Cherrful.png-340f0e44e91798ec5fae07bf88190473.ctex"]
+source_file="res://assets/background/background-dark.png"
+dest_files=["res://.godot/imported/background-dark.png-d526bed67566811500b4a24fca5fc5a2.ctex"]
 
 [params]
 
