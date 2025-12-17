@@ -1,19 +1,88 @@
-# AmbientCG Material Download Plugin
+# 2D Game — Trickkall Chibi Go (Godot/GDScript)
 
-  AmbientCG Downloader Editor Plugin For Godot 4.x
-  Downloads Files from AmbientCG.com and automatically populates StandardMaterial3D and Environment Nodes
-  
-  https://godotengine.org/asset-library/asset/3657
+Game 2D sederhana dengan karakter dari Trickkall Chibi Go, dibuat menggunakan Godot Engine dan GDScript. Proyek ini berfokus pada gerakan karakter, musuh sederhana, HUD, dan audio dasar sebagai pondasi untuk dikembangkan lebih lanjut.
 
-# Developer Notes
+> Status: aktif dikembangkan (WIP)
 
-  - Substance Painter Materials are ignored by the material browser. This may change later on, godot can't use them!
-  - Several Paths can be changed in Project Settings under "ambientcg/"
+## Fitur
 
-# Easy to Search and Download PBR Surfaces
+- Gerak karakter pemain dengan animasi dasar.
+- Musuh (`enemy.tscn`) dengan perilaku sederhana.
+- HUD skor/nyawa (`hud.tscn`).
+- Scene utama (`main.tscn`) sebagai entry point.
+- Audio latar dan efek suara dasar.
 
-![godot_plugin_a](https://github.com/user-attachments/assets/8158dcb9-888a-448b-ab95-9815ee1fd8ad)
+## Video Demo
 
-# Simple to use Automatic Material Population
+## Kontrol
 
-![godot_plugin_e](https://github.com/user-attachments/assets/df1bb780-6c91-48f4-bde4-b340ca57454a) ![godot_plugin_c](https://github.com/user-attachments/assets/45392721-0bd4-413f-9372-117cdcd12aae)
+- WASD / Panah: gerak
+- Esc: keluar
+
+## Struktur Proyek (ringkas)
+
+- `main.tscn`, `main.gd`: Scene utama dan logika game loop.
+- `player.tscn`, `player.gd`: Pemain dan kontrol.
+- `enemy.tscn`, `enemy.gd`: Musuh.
+- `hud.tscn`, `hud.gd`: Tampilan skor/nyawa.
+- `sprite_2d.tscn`, `sprite_2d.gd`: Komponen sprite pendukung.
+- `assets/`, `art/`, `fonts/`: Aset gambar, audio, dan font.
+- `addons/`: Plugin pihak ketiga (ambientcg, properUI_toast, udim_material, dsb.).
+
+## Prasyarat
+
+- Godot Engine (disarankan versi terbaru 4.x). Jika proyek Anda menggunakan versi lain, sesuaikan di editor.
+
+## Cara Menjalankan (Windows)
+
+1. Buka Godot > Open > pilih folder proyek ini (yang memiliki `project.godot`).
+2. Pastikan scene utama diarahkan ke `main.tscn` (Project > Project Settings > Application > Run > Main Scene).
+3. Tekan F5 (Play) untuk menjalankan.
+
+Opsional (CLI, jika `godot.exe` tersedia di PATH):
+
+```powershell
+godot.exe --path "." --editor
+# atau langsung main scene (sesuaikan path godot.exe Anda)
+godot.exe --path "." --play
+```
+
+## Build/Export
+
+1. Project > Export…
+2. Tambahkan preset target (Windows, Web, Android, dsb.)
+3. Atur ikon, nama aplikasi, versi, dan opsi rilis sesuai kebutuhan.
+4. Klik Export.
+
+## Aset & Kredit
+
+- Karakter: Trickkall Chibi Go (terima kasih kepada pembuatnya). Pastikan mengikuti ketentuan lisensi aset tersebut.
+- Tekstur prototipe: Kenney (folder `addons/kenney_prototype_textures`).
+- Material/UI pendukung: ambientCG plugin, Proper UI Toast, dan UDIM Material (di `addons/`).
+- Audio: file dalam `art/` dan `assets/` mengikuti lisensi masing-masing.
+
+Jika Anda menggunakan aset tambahan, harap tambahkan kredit dan lisensinya di bagian ini.
+
+## Kustomisasi
+
+- Input: Project > Project Settings > Input Map (atur binding untuk gerak/aksi).
+- Kecepatan pemain, jumlah nyawa, frekuensi spawn musuh, dan parameter lain dapat disesuaikan di script terkait (`player.gd`, `enemy.gd`, `main.gd`, `hud.gd`).
+
+## Roadmap Singkat
+
+- Penyempurnaan AI musuh (pola gerak & kesulitan bertahap).
+- Sistem level/gelombang.
+- Efek partikel & feedback visual.
+- Penyelamatan skor tertinggi (local save).
+
+## Kontribusi
+
+Pull request dan issue dipersilakan. Sertakan deskripsi singkat perubahan Anda, langkah uji, dan tangkapan layar jika relevan.
+
+## Lisensi
+
+Tentukan lisensi proyek Anda di sini (misalnya MIT/Apache-2.0). Aset pihak ketiga tunduk pada lisensi masing-masing dan mungkin memiliki batasan terpisah.
+
+---
+
+Tip: Tambahkan tangkapan layar/gameplay GIF ke README (mis. `docs/screenshot.png`) untuk memudahkan pratinjau.

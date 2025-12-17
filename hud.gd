@@ -1,8 +1,11 @@
 extends CanvasLayer
 signal start_game
-
+signal pause_game
+signal play_game
+signal quit_game
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$ConfirmationDialog.hide()
 	pass # Replace with function body.
 
 
@@ -30,14 +33,47 @@ func update_score(score):
 	$ScoreLabel.text = str(score)
 	
 
-
-
 func _on_start_button_pressed() -> void:
 	$StartButton.hide()
 	start_game.emit()
 	
 
-
-
 func _on_message_timer_timeout() -> void:
 	$Message.hide()
+
+
+func _on_pause_button_pressed() -> void:
+	$PauseButton.hide()
+	$PlayButton.show()
+	show_message("Game is Paused")
+	$OverlayPause.show()
+	pause_game.emit()
+
+
+func _on_play_button_pressed() -> void:
+	$PauseButton.show()
+	$PlayButton.hide()
+	$Message.hide()
+	$OverlayPause.hide()
+	play_game.emit()
+
+
+func _on_quit_button_pressed() -> void:
+	$OverlayPause.show()
+	$ConfirmationDialog.show()
+	pause_game.emit()
+	
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		_on_quit_button_pressed()
+
+func _on_confirmation_dialog_confirmed() -> void:
+	quit_game.emit()
+	pass
+	
+
+
+func _on_confirmation_dialog_canceled() -> void:
+	$OverlayPause.hide()
+	$ConfirmationDialog.hide()
+	play_game.emit()

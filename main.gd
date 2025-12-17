@@ -4,27 +4,33 @@ extends Node
 var score
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	new_game()
+	$HUD/PlayButton.hide()
+	$HUD/OverlayPause.hide()
+	$Player.start($StartPosition.position)
 	$Music.play()
-	$Erpin.play()
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+
 
 func game_over():
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
 	$Game_Over_sound.play()
+	$Erpin.stop()
+	$HUD/OverlayPause.show()
 	$Music.stop()
 
 func new_game():
 	score = 0
+	$HUD/OverlayPause.hide()
 	$Player.start($StartPosition.position)
 	$HUD.update_score(score)
+	$Erpin.play()
 	$HUD.show_message("Get Ready")
 	$StartTimer.start()
 	get_tree().call_group("mobs", "queue_free")
@@ -61,3 +67,19 @@ func _on_mob_timer_timeout():
 
 	# Spawn the mob by adding it to the Main scene.
 	add_child(mob)
+
+
+func pause_game() -> void:
+	get_tree().paused = true
+	$Music.stop()
+	$Erpin.stop()
+	
+
+func play_game() -> void:
+	get_tree().paused = false
+	$Music.play()
+	$Erpin.play()
+
+
+func quit_game() -> void:
+	get_tree().quit()

@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://lmkhfs37vcx2"]
+[gd_scene load_steps=8 format=3 uid="uid://lmkhfs37vcx2"]
 
 [ext_resource type="Script" uid="uid://ka31xofclw8q" path="res://hud.gd" id="1_64ctp"]
 [ext_resource type="FontFile" uid="uid://b3mmifodoymjb" path="res://fonts/Xolonium-Regular.ttf" id="2_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://dy5erqfkt0kjm" path="res://assets/icon/pause.png" id="3_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://bq3vddef0x00m" path="res://assets/icon/play-button.png" id="3_640wx"]
+[ext_resource type="Texture2D" uid="uid://gvguicu3s460" path="res://assets/icon/cancel.png" id="5_a2258"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_64ctp"]
 keycode = 4194309
@@ -47,6 +50,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="OverlayPause" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1764706, 0.1764706, 0.1764706, 0.30980393)
+
 [node name="StartButton" type="Button" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
@@ -59,6 +70,7 @@ offset_right = 88.5
 offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.7055709, 0.35441622, 1)
 theme_override_fonts/font = ExtResource("2_8sq4i")
 theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_8sq4i")
@@ -68,5 +80,53 @@ text = "Start"
 wait_time = 2.0
 one_shot = true
 
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 641.0
+offset_right = 1161.0
+offset_bottom = 520.0
+scale = Vector2(0.15, 0.15)
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 64
+icon = ExtResource("3_640wx")
+flat = true
+icon_alignment = 1
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 641.0
+offset_right = 1161.0
+offset_bottom = 520.0
+scale = Vector2(0.15, 0.15)
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 64
+icon = ExtResource("3_8sq4i")
+flat = true
+icon_alignment = 1
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 6.1035156e-05
+offset_right = 520.00006
+offset_bottom = 520.0
+scale = Vector2(0.15, 0.15)
+theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_font_sizes/font_size = 64
+icon = ExtResource("5_a2258")
+flat = true
+icon_alignment = 1
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+oversampling_override = 1.0
+title = "Exit Confirmation "
+initial_position = 1
+size = Vector2i(400, 100)
+visible = true
+min_size = Vector2i(400, 100)
+dialog_text = "Are You Sure want To Leave Speaki :(?"
+dialog_autowrap = true
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="canceled" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]
