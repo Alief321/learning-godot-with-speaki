@@ -11,7 +11,11 @@ Game 2D sederhana dengan karakter dari Trickkall Chibi Go, dibuat menggunakan Go
 - Audio latar dan efek suara dasar.
 
 ## Video Demo
-https://github.com/user-attachments/assets/fdc6c500-f8da-45a4-b991-cf1cb9b579fc
+
+
+https://github.com/user-attachments/assets/1be3c574-f6ee-4c3e-93bd-5776feb711e6
+
+
 
 
 ## Kontrol
