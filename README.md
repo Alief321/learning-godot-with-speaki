@@ -1,4 +1,4 @@
-# 2D Game — Trickkall Chibi Go (Godot/GDScript)
+# 2D Game —  Speaki Trickkall Chibi Go (Godot/GDScript)
 
 Game 2D sederhana dengan karakter dari Trickkall Chibi Go, dibuat menggunakan Godot Engine dan GDScript. Proyek ini berfokus pada gerakan karakter, musuh sederhana, HUD, dan audio dasar sebagai pondasi untuk dikembangkan lebih lanjut.
 
