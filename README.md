@@ -59,12 +59,11 @@ godot.exe --path "." --play
 
 ## Aset & Kredit
 
-- Karakter: Trickkall Chibi Go (terima kasih kepada pembuatnya). Pastikan mengikuti ketentuan lisensi aset tersebut.
+- Karakter: Trickkall Chibi Go from Epid Games
 - Tekstur prototipe: Kenney (folder `addons/kenney_prototype_textures`).
 - Material/UI pendukung: ambientCG plugin, Proper UI Toast, dan UDIM Material (di `addons/`).
 - Audio: file dalam `art/` dan `assets/` mengikuti lisensi masing-masing.
 
-Jika Anda menggunakan aset tambahan, harap tambahkan kredit dan lisensinya di bagian ini.
 
 ## Kustomisasi
 
