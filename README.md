@@ -78,10 +78,3 @@ Jika Anda menggunakan aset tambahan, harap tambahkan kredit dan lisensinya di ba
 
 Pull request dan issue dipersilakan. Sertakan deskripsi singkat perubahan Anda, langkah uji, dan tangkapan layar jika relevan.
 
-## Lisensi
-
-Tentukan lisensi proyek Anda di sini (misalnya MIT/Apache-2.0). Aset pihak ketiga tunduk pada lisensi masing-masing dan mungkin memiliki batasan terpisah.
-
----
-
-Tip: Tambahkan tangkapan layar/gameplay GIF ke README (mis. `docs/screenshot.png`) untuk memudahkan pratinjau.
