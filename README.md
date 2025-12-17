@@ -77,4 +77,3 @@ Jika Anda menggunakan aset tambahan, harap tambahkan kredit dan lisensinya di ba
 ## Kontribusi
 
 Pull request dan issue dipersilakan. Sertakan deskripsi singkat perubahan Anda, langkah uji, dan tangkapan layar jika relevan.
-
