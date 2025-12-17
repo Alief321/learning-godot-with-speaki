@@ -2,8 +2,6 @@
 
 Game 2D sederhana dengan karakter dari Trickkall Chibi Go, dibuat menggunakan Godot Engine dan GDScript. Proyek ini berfokus pada gerakan karakter, musuh sederhana, HUD, dan audio dasar sebagai pondasi untuk dikembangkan lebih lanjut.
 
-> Status: aktif dikembangkan (WIP)
-
 ## Fitur
 
 - Gerak karakter pemain dengan animasi dasar.
@@ -13,6 +11,8 @@ Game 2D sederhana dengan karakter dari Trickkall Chibi Go, dibuat menggunakan Go
 - Audio latar dan efek suara dasar.
 
 ## Video Demo
+https://github.com/user-attachments/assets/fdc6c500-f8da-45a4-b991-cf1cb9b579fc
+
 
 ## Kontrol
 
@@ -24,8 +24,7 @@ Game 2D sederhana dengan karakter dari Trickkall Chibi Go, dibuat menggunakan Go
 - `main.tscn`, `main.gd`: Scene utama dan logika game loop.
 - `player.tscn`, `player.gd`: Pemain dan kontrol.
 - `enemy.tscn`, `enemy.gd`: Musuh.
-- `hud.tscn`, `hud.gd`: Tampilan skor/nyawa.
-- `sprite_2d.tscn`, `sprite_2d.gd`: Komponen sprite pendukung.
+- `hud.tscn`, `hud.gd`: Tampilan layout button.
 - `assets/`, `art/`, `fonts/`: Aset gambar, audio, dan font.
 - `addons/`: Plugin pihak ketiga (ambientcg, properUI_toast, udim_material, dsb.).
 
