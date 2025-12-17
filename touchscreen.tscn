@@ -5,29 +5,29 @@
 [node name="TouchScreenButon" type="CanvasLayer"]
 
 [node name="RightButton" type="TouchScreenButton" parent="."]
-position = Vector2(453.00003, 384)
-scale = Vector2(3, 3)
+position = Vector2(642, 282)
+scale = Vector2(8, 20)
 shape = SubResource("RectangleShape2D_opp42")
 action = "move_right"
 visibility_mode = 1
 
 [node name="LeftButton" type="TouchScreenButton" parent="."]
-position = Vector2(331, 384)
-scale = Vector2(3, 3)
+position = Vector2(80, 282)
+scale = Vector2(8, 20)
 shape = SubResource("RectangleShape2D_opp42")
 action = "move_left"
 visibility_mode = 1
 
 [node name="UpButton" type="TouchScreenButton" parent="."]
-position = Vector2(393.00003, 327)
-scale = Vector2(3, 3)
+position = Vector2(360, 99)
+scale = Vector2(20, 10)
 shape = SubResource("RectangleShape2D_opp42")
 action = "move_up"
 visibility_mode = 1
 
 [node name="DownButton" type="TouchScreenButton" parent="."]
-position = Vector2(393.00003, 448)
-scale = Vector2(3, 3)
+position = Vector2(360.00003, 378)
+scale = Vector2(20, 10)
 shape = SubResource("RectangleShape2D_opp42")
 action = "move_down"
 visibility_mode = 1
